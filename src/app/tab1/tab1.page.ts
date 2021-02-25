@@ -9,9 +9,10 @@ import { SMS } from '@ionic-native/sms/ngx';
   selector: "app-tab1",
   templateUrl: "tab1.page.html",
   styleUrls: ["tab1.page.scss"],
+  providers : [CallNumber]
 })
 export class Tab1Page {
-  constructor(private sms: SMS ,public emp: Employee, public load: LoadingController, private callNumber: CallNumber) {}
+  constructor(public emp: Employee, public load: LoadingController, public callNumber: CallNumber, public sms: SMS ) {}
 
   call(){
     this.callNumber.callNumber("0800029999", true)

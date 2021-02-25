@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Global Covid-19 information 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Global Coronavirus information</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      Global <br>
+      <ion-card-title>Cases: {{info.cases | number}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      Global <br>
+       <ion-card-title>Death: {{info.deaths | number}}</ion-card-title>
+    </ion-card-header>
+    
+  </ion-card>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      Global <br>
+      <ion-card-title>Recovered: {{info.recovered | number}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

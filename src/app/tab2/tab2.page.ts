@@ -25,7 +25,7 @@ export class Tab2Page {
 
   async presentLoadingWithOptions() {
     const loading = await this.load.create({
-      spinner: "bubbles",
+      spinner: "circles",
       duration: 1000,
       message: "Please wait",
       translucent: true,
@@ -41,6 +41,7 @@ export class Tab2Page {
   //Search bar
 
   filterData(ev: any) {
+    this.stats = this.stats
     const val = ev.target.value;
     if (val && val.trim() != "") {
       this.stats = this.stats.filter((item) => {

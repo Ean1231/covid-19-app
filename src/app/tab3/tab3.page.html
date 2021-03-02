@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
-    <ion-title>
-      Global Covid-19 information 
-    </ion-title>
+    <ion-title> Global Covid-19 information </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,22 +13,21 @@
 
   <ion-card color="dark">
     <ion-card-header>
-      Global Cases<br>
+      Global Cases<br />
       <ion-card-title>Cases: {{info.cases | number}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 
   <ion-card color="dark">
     <ion-card-header>
-      Global Death<br>
-       <ion-card-title>Death: {{info.deaths | number}}</ion-card-title>
+      Global Death<br />
+      <ion-card-title>Death: {{info.deaths | number}}</ion-card-title>
     </ion-card-header>
-    
   </ion-card>
 
   <ion-card color="dark">
     <ion-card-header>
-      Global Recovered<br>
+      Global Recovered<br />
       <ion-card-title>Recovered: {{info.recovered | number}}</ion-card-title>
     </ion-card-header>
   </ion-card>

@@ -41,7 +41,7 @@ export class Tab2Page {
   //Search bar
 
   filterData(ev: any) {
-    this.stats = this.stats
+    this.stats = this.stats;
     const val = ev.target.value;
     if (val && val.trim() != "") {
       this.stats = this.stats.filter((item) => {

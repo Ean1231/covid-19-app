@@ -1,15 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title>Covid-19 Quiz </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-list>
     <div *ngFor="let question of Questions">
-      <ion-item>{{ question.Questions }} <br /></ion-item>
-      <ion-item *ngFor="let option of question.Options">
-        <ion-label>{{option}}</ion-label>
+      <ion-item style="--background: lightblue; margin: 10px;">{{ question.Questions }} <br /></ion-item>
+      <ion-item style="width: 350px;" *ngFor="let option of question.Options">
+        <ion-label style="color: white;">{{option}}</ion-label> 
         <input
           type="radio"
           id="male"
@@ -17,13 +21,13 @@
           slot="start"
           value="{{option}}"
           [(ngModel)]="question.userAnswer"
-        /> </ion-item
-      ><br />
-      Your Answer: {{question.userAnswer}}
+        /> </ion-item>
+        <br/>
+    <p style="margin-left: 15px; color: white;">Your Answer: {{question.userAnswer}}</p>  
     </div>
     <br /><br /><br /><br />
-    <ion-button style="margin-left: 850px" (click)="submit()"
-      >submit</ion-button
-    >
+    <!-- <ion-button style="margin-left: 850px" (click)="submit()">submit</ion-button> -->
+    <ion-button expand="block" (click)="submit()" style="align-items: center; margin: 15px; margin-bottom: 20px;">Submit</ion-button>
   </ion-list>
+  
 </ion-content>

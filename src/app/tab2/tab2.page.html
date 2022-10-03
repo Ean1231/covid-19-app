@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true">
   <ion-searchbar (ionInput)="filterData($event)" color="light"></ion-searchbar>
 
-  <ion-card *ngFor="let status of stats" color="dark">
+  <!-- <ion-card *ngFor="let status of stats" color="dark">
     <h3>{{ status.country }}</h3>
 
     <h6>
@@ -18,5 +18,48 @@
       
       <b>Recovered:</b> {{status.recovered}} <br />
     </h6>
+    
+  </ion-card> -->
+
+  <!-- <ion-card *ngFor="let status of stats" color="dark">
+    <img class='image'  alt='' />
+    <ion-card-header>
+      <ion-card-title class='text'> Country:{{ status.country }}</ion-card-title>
+      <ion-card-subtitle class='text'>{{status.active}}</ion-card-subtitle>
+      <ion-card-subtitle class='text'>{{status.deaths}}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card> -->
+
+  <ion-card *ngFor="let status of stats" style="--background:white;">
+   
+    <!-- <img src="../../assets/hotel.jpeg" alt="ion"> -->
+    <ion-card-header>
+      <ion-card-title> country: {{ status.country }} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Total Tests: {{status.totalTests}}
+    </ion-card-content>
+    <ion-footer>
+      <ion-row>
+        <ion-col center text-center>
+          <button>
+            <ion-icon name="medkit-outline"></ion-icon>
+            <div>Recovered: {{status.recovered}}</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <button style="width: 100px;">
+            <ion-icon name="add-outline"></ion-icon>
+            <div>Deaths: <br> {{status.deaths}}</div>
+          </button>
+        </ion-col>
+        <ion-col style="--background:rgb(48, 45, 45);"  center text-center>
+          <button style="width: 100px; ">
+            <ion-icon name="contract-outline"></ion-icon>
+            <div>Active: <br> {{status.active}}</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
   </ion-card>
 </ion-content>

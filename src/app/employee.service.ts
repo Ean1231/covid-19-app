@@ -14,6 +14,7 @@ export class Employee {
   
   constructor(private http: HttpClient) { }
   getInfo(){
+    console.log(this.apiUrl)
     return this.http.get(`${this.apiUrl}all`, );  }
   getData(){
     return this.http.get(`${this.apiUrl}countries`);

@@ -9,7 +9,19 @@ const routes: Routes = [
   {
     path: 'quiz',
     loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
+  },  {
+    path: 'tab4',
+    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
+  },
+  {
+    path: 'wash-hands',
+    loadChildren: () => import('./wash-hands/wash-hands.module').then( m => m.WashHandsPageModule)
+  },
+  {
+    path: 'disinfect',
+    loadChildren: () => import('./disinfect/disinfect.module').then( m => m.DisinfectPageModule)
   }
+
 ];
 @NgModule({
   imports: [

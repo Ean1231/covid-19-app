@@ -49,8 +49,8 @@
     <div
       style="display: flex; justify-content: space-around; margin-bottom: 30px"
     >
-      <div class="ion2" style="text-align: center">
-        <img
+      <div (click)="washHands()" class="ion2" style="text-align: center">
+        <img 
           src="../../assets/washing-hands.svg"
           style="height: 40px; width: 40px"
         /><br />
@@ -60,7 +60,7 @@
         </p>
       </div>
 
-      <div class="ion2" style="text-align: center">
+      <div (click)="disinfect()" class="ion2" style="text-align: center">
         <img
           src="../../assets/cleaning-spray.svg"
           style="height: 40px; width: 40px"

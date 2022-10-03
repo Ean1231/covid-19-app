@@ -1,0 +1,37 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="dark" >
+    <ion-title style="text-align: center;"> Latest Covid news</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+  <!-- fab placed to the (vertical) center and end -->
+  <ion-fab (click)="goHome()" vertical="bottom" horizontal="end" slot="fixed"  >
+    <ion-fab-button >
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div *ngFor="let article of data" >
+    <a style="text-decoration: none; color: white;" href="{{article.url}}...">
+      <ion-card>
+        <ion-card-header>
+          <ion-img  [src]="article.urlToImage" style="height: 110px;"></ion-img>
+          <ion-card-subtitle style="color: white;">{{article.author}} - {{article.publishedAt}}</ion-card-subtitle>
+          <ion-card-title style="color: white;">{{article.title.substring(0, 30)}}...</ion-card-title>
+          
+        </ion-card-header>
+      
+        <ion-card-content style="color: white;">
+          {{article.description.substring(0, 102)}}...
+        </ion-card-content>
+
+      </ion-card>
+    </a>
+
+     
+  
+  </div>
+
+
+</ion-content>

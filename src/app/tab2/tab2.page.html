@@ -30,33 +30,33 @@
     </ion-card-header>
   </ion-card> -->
 
-  <ion-card *ngFor="let status of stats" style="--background:white;">
+  <ion-card style="border: 1px solid grey;" *ngFor="let status of stats" >
    
     <!-- <img src="../../assets/hotel.jpeg" alt="ion"> -->
     <ion-card-header>
-      <ion-card-title> country: {{ status.country }} </ion-card-title>
+      <ion-card-title style="color: white;"> Country: {{ status.country }} </ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content style="color: white;">
       Total Tests: {{status.totalTests}}
     </ion-card-content>
-    <ion-footer>
+    <ion-footer style="border-top: 1px solid grey;">
       <ion-row>
-        <ion-col center text-center>
-          <button>
-            <ion-icon name="medkit-outline"></ion-icon>
-            <div>Recovered: {{status.recovered}}</div>
+        <ion-col style="border-right: 1px solid grey;" center text-center>
+          <button style="background-color: rgb(48, 45, 45);">
+            <ion-icon style="color: white;" name="medkit-outline"></ion-icon>
+            <div style="color: white;">Recovered: {{status.recovered}}</div>
           </button>
         </ion-col>
-        <ion-col center text-center>
-          <button style="width: 100px;">
-            <ion-icon name="add-outline"></ion-icon>
-            <div>Deaths: <br> {{status.deaths}}</div>
+        <ion-col style="border-right: 1px solid grey;" center text-center>
+          <button style="background-color: rgb(48, 45, 45); width: 100px;" >
+            <ion-icon style="color: white;" name="add-outline"></ion-icon>
+            <div style="color: white;">Deaths: <br> {{status.deaths}}</div>
           </button>
         </ion-col>
-        <ion-col style="--background:rgb(48, 45, 45);"  center text-center>
-          <button style="width: 100px; ">
-            <ion-icon name="contract-outline"></ion-icon>
-            <div>Active: <br> {{status.active}}</div>
+        <ion-col   center text-center>
+          <button  style="background-color: rgb(48, 45, 45); width: 100px;"  >
+            <ion-icon style="color: white;" name="contract-outline"></ion-icon>
+            <div style="color: white;">Active: <br> {{status.active}}</div>
           </button>
         </ion-col>
       </ion-row>

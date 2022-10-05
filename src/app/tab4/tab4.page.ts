@@ -26,5 +26,4 @@ data: any;
     this.router.navigateByUrl('tabs/tab1');
   }
   
-
 }

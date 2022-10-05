@@ -30,7 +30,7 @@
     </ion-card-header>
   </ion-card> -->
 
-  <ion-card style="border: 1px solid grey;" *ngFor="let status of stats" >
+  <ion-card style="border: 1px solid rgb(73, 71, 71); " *ngFor="let status of stats" >
    
     <!-- <img src="../../assets/hotel.jpeg" alt="ion"> -->
     <ion-card-header>
@@ -39,15 +39,15 @@
     <ion-card-content style="color: white;">
       Total Tests: {{status.totalTests}}
     </ion-card-content>
-    <ion-footer style="border-top: 1px solid grey;">
+    <ion-footer style="border-top: 1px solid rgb(66, 65, 65);">
       <ion-row>
-        <ion-col style="border-right: 1px solid grey;" center text-center>
+        <ion-col style="border-right: 1px solid rgb(56, 54, 54);" center text-center>
           <button style="background-color: rgb(48, 45, 45);">
             <ion-icon style="color: white;" name="medkit-outline"></ion-icon>
             <div style="color: white;">Recovered: {{status.recovered}}</div>
           </button>
         </ion-col>
-        <ion-col style="border-right: 1px solid grey;" center text-center>
+        <ion-col style="border-right: 1px solid rgb(56, 54, 54);" center text-center>
           <button style="background-color: rgb(48, 45, 45); width: 100px;" >
             <ion-icon style="color: white;" name="add-outline"></ion-icon>
             <div style="color: white;">Deaths: <br> {{status.deaths}}</div>
